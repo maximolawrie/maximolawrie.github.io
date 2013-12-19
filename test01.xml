@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1" xmlns="http://www.w3.org/2001/vxml">
+
+  <meta name="maintainer" content="YOUREMAILADDRESS@HERE.com"/>
+
+
+  <form id="MainMenu">
+    <field name="PersonsName">
+      <prompt>
+        Welcome to Tait Info Link Voice. Please say your first name.
+      </prompt>
+
+    <!-- Define the grammar. -->
+    <grammar xml:lang="en-us" root = "myrule">
+
+    <rule id="myrule">
+      <one-of>
+        <item> Tanmay </item>
+        <item> Rodney </item>
+        <item> Tony </item>
+        <item> Frank </item>
+        <item> Guy </item>
+        <item> Geoff </item>
+        <item> Leon </item>
+        <item> Bruce </item>
+        <item> Clive </item>
+        <item> Max </item>
+        <item> Maximo </item>
+        <item> Buster </item>
+      </one-of>
+      </rule>
+    </grammar>
+
+    <!-- The user was silent, restart the field. -->
+    <noinput>
+        I did not hear anything.  Please try again.
+        <reprompt/>
+    </noinput>
+
+    <!-- The user said something that was not defined in our grammar. -->
+    <nomatch>
+        I did not recognize that name.  Please try again.
+        <reprompt/>
+    </nomatch>
+  </field>
+
+  <!-- Checks the "PersonsName" value against each of the valid values. -->
+  <filled namelist="PersonsName">
+    <if cond="PersonsName == 'Tanmay'">
+      <prompt>
+        Tanmay Bola is a design engineer in the innovation area.
+      </prompt>
+    <elseif cond="PersonsName == 'Rodney'"/>
+      <prompt>
+        Rodney Mackrell is a designer in the usability team.
+      </prompt>
+    <elseif cond="PersonsName == 'Tony'"/>
+      <prompt>
+        Tony Beswick is a senior ar and dee technician in hardware engineering.
+      </prompt>
+    <elseif cond="PersonsName == 'Frank'"/>
+      <prompt>
+        Frank Owen is the CEO at Tait. He gets to sit in the big chair.
+      </prompt>
+    <elseif cond="PersonsName == 'Guy'"/>
+      <prompt>
+        Guy Hooker is a solutions and systems architect.
+      </prompt>
+    <elseif cond="PersonsName == 'Geoff'"/>
+      <prompt>
+        Geoff Peck is a solutions and systems architect.
+      </prompt>
+     <elseif cond="PersonsName == 'Leon'"/>
+      <prompt>
+        Leon Erasmuson is the usability design manager.
+      </prompt>
+     <elseif cond="PersonsName == 'Bruce'"/>
+      <prompt>
+        Bruce Mazza is the marketing solutions manager.
+      </prompt>
+     <elseif cond="PersonsName == 'Clive'"/>
+      <prompt>
+        Clive Horn is the research Leader.
+      </prompt>
+     <elseif cond="PersonsName == 'Max'"/>
+      <prompt>
+        Maximo Lawrie is a summer student.
+      </prompt>
+     <elseif cond="PersonsName == 'Maximo'"/>
+      <prompt>
+        Maximo Lawrie is a summer student.
+      </prompt>
+     <elseif cond="PersonsName == 'Buster'"/>
+      <prompt>
+        Buster Caldwell is a summer student.
+      </prompt>
+    <else/>
+      <prompt>
+        A match has occurred, but no specific if statement
+        was written for it.  Probably no one important.
+      </prompt>
+    </if>	
+  </filled>
+  </form>
+</vxml>
