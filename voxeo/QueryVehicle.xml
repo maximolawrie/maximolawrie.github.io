@@ -41,7 +41,7 @@
 		
 		<block name="finish">
 			<prompt>
-				Querying plate <value expr="Char_1"/><value expr="Char_2"/><value expr="Char_3"/><value expr="Char_4"/><value expr="Char_5"/><value expr="Char_6"/>
+				Querying plate <value expr="Char_1.response"/><value expr="Char_2.response"/><value expr="Char_3.response"/><value expr="Char_4.response"/><value expr="Char_5.response"/><value expr="Char_6.response"/>
 			</prompt>
 		</block>
 
