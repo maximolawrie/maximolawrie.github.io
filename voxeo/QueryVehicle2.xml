@@ -54,11 +54,5 @@
 				Querying plate <value expr="plate"/>				
 			</prompt>
 		</block>
-		<block name="finish3">
-			<prompt>
-				<value expr="queryURL.title"/>				
-			</prompt>
-		</block>
-
 	</form>
 </vxml>
