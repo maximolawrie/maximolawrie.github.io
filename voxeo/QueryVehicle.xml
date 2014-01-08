@@ -35,11 +35,14 @@
 		<subdialog name="Char_6" src="QV_sub.xml">
 			<param name="question" expr="'And now the last one.'"/>
 			<filled>
-				<goto nextitem="finish2"/>
+				<goto nextitem="finish3"/>
 			</filled>
 		</subdialog>
 		<var name="plate">
 			<value expr="Char_1.response"/><value expr="Char_2.response"/><value expr="Char_3.response"/><value expr="Char_4.response"/><value expr="Char_5.response"/><value expr="Char_6.response"/>
+		</var>
+		<var name="queryURL">
+			http://www.carjam.co.nz/car/?plate=<value expr="queryURL"/>
 		</var>
 		<block name="finish">
 			<prompt>
@@ -49,6 +52,11 @@
 		<block name="finish2">
 			<prompt>
 				Querying plate <value expr="plate"/>				
+			</prompt>
+		</block>
+		<block name="finish3">
+			<prompt>
+				<value expr="queryURL.title"/>				
 			</prompt>
 		</block>
 
