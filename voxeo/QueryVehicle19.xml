@@ -41,7 +41,7 @@
 		<block name="finish">
 			<var name="plate" expr="Char_1.character + Char_2.character + Char_3.character + Char_4.character + Char_5.character + Char_6.character"/>
 			<var name="queryURL" expr="'https://numberplates.herokuapp.com/' + plate"/>
-			<var name="queryURL2" expr=expr="'https://numberplates.herokuapp.com/'"/>
+			<var name="queryURL2" expr="'https://numberplates.herokuapp.com/'"/>
 			<data srcexpr="queryURL2" name="carJamText"/>
 			<prompt>
 				<value expr="carJamText"/>
